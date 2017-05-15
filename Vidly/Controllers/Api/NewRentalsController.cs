@@ -1,7 +1,4 @@
-﻿using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System;
 using System.Linq;
 using System.Web.Http;
 using Vidly.Dtos;
@@ -13,9 +10,9 @@ namespace Vidly.Controllers.Api
     {
         private ApplicationDbContext _context;
 
-        public NewRentalsController(ApplicationDbContext context)
+        public NewRentalsController()
         {
-            _context = context;
+            _context = new ApplicationDbContext();
         }
 
         [HttpPost]
